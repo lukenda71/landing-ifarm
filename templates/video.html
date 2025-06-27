@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Personalizzato</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #fff;
+      text-align: center;
+    }
+    h2 {
+      color: #444;
+    }
+    iframe {
+      margin-top: 20px;
+      width: 560px;
+      height: 315px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <h2>Ciao {{ nome_ospite }},</h2>
+  <p>Questo messaggio è da parte di {{ nome_promoter }} {{ cognome_promoter }}!</p>
+  <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+</body>
+</html>
 
