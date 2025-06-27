@@ -17,7 +17,7 @@ def video():
     codice = request.form['codice']
 
     if not is_valid_code(codice):
-        return "<h2 style='color:red; text-align:center;'>❌ Codice non valido.<br> Deve contenere 6 cifre e almeno un '1'.</h2>"
+        return "<h2 style='color:red; text-align:center;'>❌ Codice non valido.</h2>"
 
     return render_template("video.html",
                            nome_promoter=nome_promoter,
