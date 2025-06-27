@@ -6,51 +6,67 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      background: #fff;
       padding: 2rem;
-      background-color: #f4f4f4;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
     }
     h1 {
       color: #333;
+      margin-bottom: 1rem;
     }
-    form {
-      background: white;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      max-width: 400px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    input, button {
+    label {
       display: block;
+      text-align: left;
+      margin: 10px 0 4px;
+    }
+    input {
       width: 100%;
-      margin: 0.5rem 0;
       padding: 0.5rem;
+      margin-bottom: 10px;
       font-size: 1rem;
     }
     button {
-      background-color: #0099ff;
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #007bff;
       color: white;
+      font-size: 1rem;
       border: none;
-      border-radius: 4px;
+      border-radius: 5px;
       cursor: pointer;
     }
     button:hover {
-      background-color: #007acc;
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
-  <h1>Ciao 👋, questa è la tua landing page!</h1>
-  <form method="POST" action="/video">
-    <label>Nome Promoter:</label>
-    <input type="text" name="nome_promoter" required>
+  <div class="container">
+    <h1>Ciao 👋, benvenuto nella tua landing page!</h1>
+    <form method="POST" action="/video">
+      <label>Nome Promoter:</label>
+      <input type="text" name="nome_promoter" required>
 
-    <label>Cognome Promoter:</label>
-    <input type="text" name="cognome_promoter" required>
+      <label>Cognome Promoter:</label>
+      <input type="text" name="cognome_promoter" required>
 
-    <label>Nome Ospite:</label>
-    <input type="text" name="nome_ospite" required>
+      <label>Nome Ospite:</label>
+      <input type="text" name="nome_ospite" required>
 
-    <button type="submit">Guarda Video</button>
-  </form>
+      <button type="submit">Guarda Video</button>
+    </form>
+  </div>
 </body>
 </html>
