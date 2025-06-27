@@ -1,19 +1,56 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Benvenuto su iFarm</title>
-  </head>
-  <body>
-    <h1>Ciao 👋, questa è la tua landing page!</h1>
-    <form method="POST" action="/video">
-      <label for="nome_promoter">Nome Promoter:</label><br>
-      <input type="text" name="nome_promoter"><br>
-      <label for="cognome_promoter">Cognome Promoter:</label><br>
-      <input type="text" name="cognome_promoter"><br>
-      <label for="nome_ospite">Nome Ospite:</label><br>
-      <input type="text" name="nome_ospite"><br><br>
-      <input type="submit" value="Guarda Video">
-    </form>
-  </body>
-</html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Landing Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      color: #333;
+    }
+    form {
+      background: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      max-width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, button {
+      display: block;
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #0099ff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #007acc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ciao 👋, questa è la tua landing page!</h1>
+  <form method="POST" action="/video">
+    <label>Nome Promoter:</label>
+    <input type="text" name="nome_promoter" required>
 
+    <label>Cognome Promoter:</label>
+    <input type="text" name="cognome_promoter" required>
+
+    <label>Nome Ospite:</label>
+    <input type="text" name="nome_ospite" required>
+
+    <button type="submit">Guarda Video</button>
+  </form>
+</body>
+</html>
