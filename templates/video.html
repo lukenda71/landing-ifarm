@@ -2,47 +2,64 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Benvenuto {{ nome_ospite }}</title>
+  <title>Video AI Farm</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+      font-family: 'Helvetica Neue', sans-serif;
       margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
       text-align: center;
     }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
     h1 {
-      color: #333;
-      font-size: 2rem;
+      font-size: 28px;
+      color: #2c3e50;
     }
     p {
-      margin-bottom: 20px;
+      color: #555;
+    }
+    .cta {
+      margin-top: 40px;
+    }
+    .cta h2 {
+      color: #2c3e50;
+    }
+    .cta span {
+      color: #e74c3c;
+      font-weight: bold;
     }
     iframe {
+      width: 100%;
+      height: 450px;
       border: none;
-      max-width: 100%;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
-  <h1>{{ nome_ospite }}, benvenuto nel mondo dell'A.I. 🤖</h1>
-  <p>Il tuo promoter {{ nome_promoter }} {{ cognome_promoter }} ti ha riservato questo video speciale:</p>
-  <div style="text-align: center; margin-top: 40px;">
-  <h2 style="color: #2c3e50;">🎁 Scopri la tua promozione esclusiva!</h2>
-  <p style="font-size: 18px; color: #555;">
-    Hai appena scoperto il futuro dell'intelligenza artificiale.<br>
-    Ora tocca a te: <strong>chiama subito {{ nome_promoter }}</strong><br>
-    per ricevere <span style="color: #e74c3c; font-weight: bold;">un’offerta riservata e a tempo limitato</span>.
-  </p>
-  <p style="font-size: 16px; color: #777; margin-top: 10px;">
-    📞 Il tuo contatto diretto per entrare nel mondo A.I. con un vantaggio esclusivo!
-  </p>
-</div>
+  <div class="container">
+    <h1>{{ nome_ospite }}, benvenuto nel mondo dell'A.I. 🤖</h1>
+    <p>Il tuo promoter {{ nome_promoter }} {{ cognome_promoter }} ti ha riservato questo video speciale:</p>
 
-  <iframe src="https://drive.google.com/file/d/1TSfLCWlG7GGkWYg_4lnnnzGp0_C27FsP/preview" width="640" height="360" allow="autoplay"></iframe>
+    <!-- VIDEO CENTRATO -->
+    <iframe src="https://drive.google.com/file/d/1TSfLCWlG7GGkWYg_4lnnnzGp0_C27FsP/preview" allowfullscreen></iframe>
+
+    <!-- CTA DOPO IL VIDEO -->
+    <div class="cta">
+      <h2>🎁 Scopri la tua promozione esclusiva!</h2>
+      <p>Hai appena scoperto il futuro dell'intelligenza artificiale.<br>
+      Ora tocca a te: <strong>chiama subito {{ nome_promoter }}</strong><br>
+      per ricevere <span>un’offerta riservata e a tempo limitato</span>.</p>
+      <p>📞 Il tuo contatto diretto per entrare nel mondo A.I. con un vantaggio esclusivo!</p>
+    </div>
+  </div>
 </body>
 </html>
