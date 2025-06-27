@@ -2,7 +2,6 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-# ✅ Funzione per validare il codice
 def is_valid_code(code):
     return len(code) == 6 and code.count('1') >= 1
 
@@ -18,7 +17,7 @@ def video():
     codice = request.form['codice']
 
     if not is_valid_code(codice):
-        return "Codice non valido. Deve essere di 6 cifre e contenere almeno una '1'.", 400
+        return "<h2 style='color:red; text-align:center;'>❌ Codice non valido.<br> Deve contenere 6 cifre e almeno un '1'.</h2>"
 
     return render_template("video.html",
                            nome_promoter=nome_promoter,
