@@ -2,48 +2,49 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Landing Page</title>
+  <title>Benvenuto nel futuro!</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f2f5;
-      height: 100vh;
-      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f1f3f5;
       display: flex;
       justify-content: center;
       align-items: center;
+      height: 100vh;
+      margin: 0;
     }
-    .container {
-      background: #fff;
-      padding: 2rem;
+    .form-container {
+      background: white;
+      padding: 40px;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      width: 100%;
       max-width: 400px;
-      width: 90%;
-      text-align: center;
     }
     h1 {
+      text-align: center;
       color: #333;
-      margin-bottom: 1rem;
     }
     label {
       display: block;
-      text-align: left;
-      margin: 10px 0 4px;
+      margin-top: 15px;
+      font-weight: bold;
     }
     input {
       width: 100%;
-      padding: 0.5rem;
-      margin-bottom: 10px;
-      font-size: 1rem;
+      padding: 10px;
+      margin-top: 5px;
+      box-sizing: border-box;
     }
     button {
+      margin-top: 25px;
       width: 100%;
-      padding: 0.75rem;
+      padding: 12px;
       background-color: #007bff;
-      color: white;
-      font-size: 1rem;
       border: none;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
       border-radius: 5px;
       cursor: pointer;
     }
@@ -53,17 +54,20 @@
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="form-container">
     <h1>BENVENUTO NEL FUTURO!!</h1>
-    <form method="POST" action="/video">
-      <label>Nome Promoter:</label>
-      <input type="text" name="nome_promoter" required>
+    <form method="post" action="/video">
+      <label for="nome_promoter">Nome Promoter:</label>
+      <input type="text" id="nome_promoter" name="nome_promoter" required>
 
-      <label>Cognome Promoter:</label>
-      <input type="text" name="cognome_promoter" required>
+      <label for="cognome_promoter">Cognome Promoter:</label>
+      <input type="text" id="cognome_promoter" name="cognome_promoter" required>
 
-      <label>Nome Ospite:</label>
-      <input type="text" name="nome_ospite" required>
+      <label for="nome_ospite">Nome Ospite:</label>
+      <input type="text" id="nome_ospite" name="nome_ospite" required>
+
+      <label for="codice">Codice:</label>
+      <input type="text" id="codice" name="codice" maxlength="6" placeholder="Es: 918203" required>
 
       <button type="submit">Guarda Video</button>
     </form>
